@@ -1,4 +1,4 @@
-package br.pucrs.engswii.controllers;
+package br.pucrs.engswii.controllers.student;
 
 import java.util.List;
 
