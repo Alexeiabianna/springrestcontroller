@@ -5,9 +5,9 @@ import java.util.List;
 
 public class UserRegistration {
 
-    private List<User> userRecords;
+  private List<User> userRecords;
 
-    private static UserRegistration usrRegd = null;
+  private static UserRegistration usrRegd = null;
 
 	private UserRegistration(){
 		userRecords = new ArrayList<User>();        
@@ -24,17 +24,38 @@ public class UserRegistration {
 		}
 	}
 
-    public void add(User user) {
-		userRecords.add(user);
+  public Boolean add(User user) {
+		for (User user_list : userRecords) {
+			if(user_list.getName() == user.getName()) {
+				return false;
+			}
+		}
+		return true;
 	}
 
-    public List<User> getUserRecords() {
-        return userRecords;
-    }
+  public List<User> getUserRecords() {
+      return userRecords;
+  }
 
-    public Boolean login(User user) {
-        //implementar
-        return false;
-    }
+  public Boolean login(User user) {
+      for (User user_list : userRecords) {
+				if(user_list.getName() == user.getName() && user_list.getPassword() == user.getPassword()) {
+					return true;
+				}
+			}
+    return false;
+  }
+
+	public Boolean logout(User user) {
+		for (User user_list : userRecords) {
+			if(user_list.getName().equals(user.getName())){
+				user_list.setStatus();
+				return true;
+			}			
+		}
+		return true;
+	}
+
+
 
 }
