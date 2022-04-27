@@ -24,38 +24,35 @@ public class UserRegistration {
 		}
 	}
 
-  public Boolean add(User user) {
+  public String add(User user) {
 		for (User user_list : userRecords) {
 			if(user_list.getName() == user.getName()) {
-				return false;
+				return "Registration un-successful";
 			}
 		}
-		return true;
+		return "Registration successful";
 	}
 
   public List<User> getUserRecords() {
       return userRecords;
   }
 
-  public Boolean login(User user) {
+  public String login(User user) {
       for (User user_list : userRecords) {
 				if(user_list.getName() == user.getName() && user_list.getPassword() == user.getPassword()) {
-					return true;
+					return "Login successful";
 				}
-			}
-    return false;
-  }
+		}
+		return "Login un-successful";
+	}
 
-	public Boolean logout(User user) {
+	public String logout(User user) {
 		for (User user_list : userRecords) {
 			if(user_list.getName().equals(user.getName())){
 				user_list.setStatus();
-				return true;
-			}			
+				return "Logout successful";
+				}
 		}
-		return true;
+		return "Logout un-successful";
 	}
-
-
-
 }
