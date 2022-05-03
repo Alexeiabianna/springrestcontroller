@@ -27,10 +27,11 @@ public class UserRegistration {
   public String add(User user) {
 		for (User user_list : userRecords) {
 			if(user_list.getName() == user.getName()) {
-				return "Registration un-successful";
+				userRecords.add(user);
+				return "Successful";
 			}
 		}
-		return "Registration successful";
+		return "Un-successful";
 	}
 
   public List<User> getUserRecords() {
