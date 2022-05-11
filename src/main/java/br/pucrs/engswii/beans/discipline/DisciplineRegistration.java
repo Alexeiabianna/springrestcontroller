@@ -1,4 +1,4 @@
-package br.pucrs.engswii.beans;
+package br.pucrs.engswii.beans.discipline;
 
 import java.util.ArrayList;
 import java.util.List;

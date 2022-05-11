@@ -1,4 +1,4 @@
-package br.pucrs.engswii.controllers;
+package br.pucrs.engswii.controllers.student;
 
 //import org.springframework.stereotype.Controller;
 //import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,7 +6,7 @@ package br.pucrs.engswii.controllers;
 //import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.pucrs.engswii.beans.StudentRegistration;
+import br.pucrs.engswii.beans.student.StudentRegistration;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
