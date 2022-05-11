@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.pucrs.engswii.beans.*;
+import br.pucrs.engswii.beans.user.User;
+import br.pucrs.engswii.beans.user.UserRegistration;
+import br.pucrs.engswii.beans.user.UserRegistrationReply;
 
 @RestController
 public class UserRegistrationController {

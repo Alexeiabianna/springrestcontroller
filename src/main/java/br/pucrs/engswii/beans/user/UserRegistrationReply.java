@@ -1,7 +1,6 @@
-package br.pucrs.engswii.beans;
+package br.pucrs.engswii.beans.user;
 
 public class UserRegistrationReply {
-<<<<<<< HEAD
 
   String name;
   String password;
@@ -33,29 +32,4 @@ public class UserRegistrationReply {
     this.registrationStatus = registrationStatus;
   }
   
-=======
-    String name;
-    String password;
-	String registrationStatus;
-
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getRegistrationStatus() {
-		return registrationStatus;
-	}
-	public void setRegistrationStatus(String registrationStatus) {
-		this.registrationStatus = registrationStatus;
-	}
-
->>>>>>> 52272e5cf16b01318b72bef13a01ccae26fc6a3c
 }

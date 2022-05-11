@@ -6,7 +6,7 @@ package br.pucrs.engswii.controllers.student;
 //import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.pucrs.engswii.beans.StudentRegistration;
+import br.pucrs.engswii.beans.student.StudentRegistration;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
