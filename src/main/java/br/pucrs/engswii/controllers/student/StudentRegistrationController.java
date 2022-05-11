@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.pucrs.engswii.beans.*;
 
-@RestController
+@RestController("register")
 public class StudentRegistrationController {
 
 	//  @RequestMapping(method = RequestMethod.POST, value="/register/student")
 	//
 	//  @ResponseBody
-	@PostMapping("/register/student")
+	@PostMapping("/student")
 	public StudentRegistrationReply registerStudent(@RequestBody Student student) {
 		System.out.println("In registerStudent");
 		StudentRegistrationReply stdregreply = new StudentRegistrationReply();           
