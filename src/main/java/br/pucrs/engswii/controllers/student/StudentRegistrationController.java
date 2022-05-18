@@ -1,4 +1,4 @@
-package br.pucrs.engswii.controllers;
+package br.pucrs.engswii.controllers.student;
 
 import java.util.List;
 
@@ -11,14 +11,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.pucrs.engswii.beans.*;
+import br.pucrs.engswii.beans.student.Student;
+import br.pucrs.engswii.beans.student.StudentRegistration;
+import br.pucrs.engswii.beans.student.StudentRegistrationReply;
 
-@RestController
+@RestController("register")
 public class StudentRegistrationController {
 
 	//  @RequestMapping(method = RequestMethod.POST, value="/register/student")
 	//
 	//  @ResponseBody
-	@PostMapping("/register/student")
+	@PostMapping("/student")
 	public StudentRegistrationReply registerStudent(@RequestBody Student student) {
 		System.out.println("In registerStudent");
 		StudentRegistrationReply stdregreply = new StudentRegistrationReply();           

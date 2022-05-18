@@ -1,4 +1,4 @@
-package br.pucrs.engswii.controllers;
+package br.pucrs.engswii.controllers.student;
 
 //import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 //import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.pucrs.engswii.beans.Student;
-import br.pucrs.engswii.beans.StudentRegistration;
+import br.pucrs.engswii.beans.student.Student;
+import br.pucrs.engswii.beans.student.StudentRegistration;
 
 @RestController
 public class StudentUpdateController {

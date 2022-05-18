@@ -1,4 +1,4 @@
-package br.pucrs.engswii.beans;
+package br.pucrs.engswii.beans.student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +58,25 @@ public class StudentRegistration {
 
 	public List<Student> getStudentRecords() {
 		return studentRecords;
+	}
+	
+	public Student getStudentByRegistration(String regdNum) {
+		for (Student student : studentRecords) {
+			if (regdNum.equals(student.getRegistrationNumber())) {
+				return student;
+			}
+		}
+		return null;
+	}
+
+	public List<Student> getStudentsByNameSegment(String nameSegment) {
+		List<Student> resultedStudents = new ArrayList<>();
+		for (Student student : studentRecords) {
+			if (student.getName().contains(nameSegment)) {
+				resultedStudents.add(student);
+			}
+		}
+		return resultedStudents;
 	}
 
 }

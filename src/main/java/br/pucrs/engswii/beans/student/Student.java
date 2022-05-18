@@ -1,12 +1,11 @@
-package br.pucrs.engswii.beans;
+package br.pucrs.engswii.beans.student;
 
-public class StudentRegistrationReply {
+public class Student {
 
-	String name;
-	int age;
-	String registrationNumber;
-	String registrationStatus;
-
+    String name;
+    int age;
+    String registrationNumber;
+    
 	public String getName() {
 		return name;
 	}
@@ -25,11 +24,4 @@ public class StudentRegistrationReply {
 	public void setRegistrationNumber(String registrationNumber) {
 		this.registrationNumber = registrationNumber;
 	}
-	public String getRegistrationStatus() {
-		return registrationStatus;
-	}
-	public void setRegistrationStatus(String registrationStatus) {
-		this.registrationStatus = registrationStatus;
-	}
-
 }
