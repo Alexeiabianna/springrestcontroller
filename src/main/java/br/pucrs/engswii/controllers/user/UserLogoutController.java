@@ -9,15 +9,15 @@ import br.pucrs.engswii.beans.user.User;
 import br.pucrs.engswii.beans.user.UserRegistration;
 
 @RestController
-public class UserLoginController {
+public class UserLogoutController {
 
-	//  @RequestMapping(method = RequestMethod.POST, value="/user/login")
+	//  @RequestMapping(method = RequestMethod.POST, value="/user/logout")
 	//
 	//  @ResponseBody
-	@PostMapping("/login")
-	public String loginUser(@RequestBody User user) {
-		System.out.println("In loginUser");
-		return UserRegistration.getInstance().login(user);
+	@PostMapping("/logout")
+	public String logoutUser(@RequestBody User user) {
+		System.out.println("In logoutUser");
+		return UserRegistration.getInstance().logout(user);
 	}
 
 }

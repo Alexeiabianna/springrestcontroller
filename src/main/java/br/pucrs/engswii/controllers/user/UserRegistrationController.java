@@ -24,12 +24,10 @@ public class UserRegistrationController {
 	@PostMapping("/register/user")
 	public UserRegistrationReply registerUser(@RequestBody User user) {
 		System.out.println("In registerUser");
-		UserRegistrationReply userRegreply = new UserRegistrationReply();           
-		UserRegistration.getInstance().add(user);
-		//We are setting the below value just to reply a message back to the caller
+		UserRegistrationReply userRegreply = new UserRegistrationReply();
+		String ret = UserRegistration.getInstance().add(user);
 		userRegreply.setName(user.getName());
-		userRegreply.setRegistrationNumber(user.getRegistrationNumber());
-		userRegreply.setRegistrationStatus("Successful");
+		userRegreply.setRegistrationStatus(ret);
 
 		return userRegreply;
 	}

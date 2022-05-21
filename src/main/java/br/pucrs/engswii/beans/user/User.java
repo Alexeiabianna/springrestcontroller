@@ -3,7 +3,6 @@ package br.pucrs.engswii.beans.user;
 public class User {
     String name;
     String password;
-    String registrationNumber;
     Boolean status;
 
     public String getName() {
@@ -26,17 +25,7 @@ public class User {
         return status;
     }
 
-    public void setStatus() {
-        this.status = !this.status;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
-
-    public String getRegistrationNumber() {
-        return registrationNumber;
-    }
-
-    public void setRegistrationNumber(String registrationNumber) {
-        this.registrationNumber = registrationNumber;
-    }
-    
-
 }

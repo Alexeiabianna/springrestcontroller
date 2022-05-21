@@ -28,7 +28,6 @@ public class StudentRegistrationController {
 		StudentRegistrationReply stdregreply = new StudentRegistrationReply();
 		if(UserRegistration.getInstance().isLogged().equals("Validation successful")){
 			StudentRegistration.getInstance().add(student);
-			//We are setting the below value just to reply a message back to the caller
 			stdregreply.setName(student.getName());
 			stdregreply.setAge(student.getAge());
 			stdregreply.setRegistrationNumber(student.getRegistrationNumber());

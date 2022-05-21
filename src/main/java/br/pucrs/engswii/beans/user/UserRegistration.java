@@ -26,12 +26,13 @@ public class UserRegistration {
 
   public String add(User user) {
 		for (User user_list : userRecords) {
-			if(user_list.getName() == user.getName()) {
-				userRecords.add(user);
-				return "Successful";
+			if(user_list.getName().equals(user.getName())) {
+				return "Registration un-successful";
 			}
 		}
-		return "Un-successful";
+		user.setStatus(false);
+		userRecords.add(user);
+		return "Registration successful";
 	}
 
   public List<User> getUserRecords() {
@@ -40,10 +41,10 @@ public class UserRegistration {
 
   public String login(User user) {
       for (User user_list : userRecords) {
-				if(user_list.getName() == user.getName() && user_list.getPassword() == user.getPassword()) {
-					user.setStatus();
-					return "Login successful";
-				}
+			if(user_list.getName().equals(user.getName()) && user_list.getPassword().equals(user.getPassword())) {
+				user_list.setStatus(true);
+				return "Login successful";
+			}
 		}
 		return "Login un-successful";
 	}
@@ -51,7 +52,7 @@ public class UserRegistration {
 	public String logout(User user) {
 		for (User user_list : userRecords) {
 			if(user_list.getName().equals(user.getName())){
-				user_list.setStatus();
+				user_list.setStatus(false);
 				return "Logout successful";
 				}
 		}
