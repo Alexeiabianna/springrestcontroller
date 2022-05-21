@@ -31,5 +31,4 @@ public class UserRegistrationReply {
   public void setRegistrationStatus(String registrationStatus) {
     this.registrationStatus = registrationStatus;
   }
-  
 }

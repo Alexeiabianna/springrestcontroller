@@ -56,4 +56,13 @@ public class UserRegistration {
 		}
 		return "Logout un-successful";
 	}
+	
+	public String isLogged() {
+		for (User user_list : userRecords) {
+			if(user_list.getIsLogged()){
+				return "Validation successful";
+			}
+		}
+		return "Validation un-successful";
+	}
 }

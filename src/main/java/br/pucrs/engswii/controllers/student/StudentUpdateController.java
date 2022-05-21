@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.pucrs.engswii.beans.student.Student;
 import br.pucrs.engswii.beans.student.StudentRegistration;
+import br.pucrs.engswii.beans.user.UserRegistration;
 
 @RestController
 public class StudentUpdateController {
@@ -21,7 +22,10 @@ public class StudentUpdateController {
 	@PutMapping("/update/student")
 	public String updateStudentRecord(@RequestBody Student stdn) {
 		System.out.println("In updateStudentRecord");   
-		return StudentRegistration.getInstance().upDateStudent(stdn);
+		if(UserRegistration.getInstance().isLogged().equals("Validation successful")){
+			return StudentRegistration.getInstance().upDateStudent(stdn);
+		}		
+		return UserRegistration.getInstance().isLogged(); //retorna "Validation un-successful"
 	}
 
 }

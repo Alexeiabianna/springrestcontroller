@@ -14,6 +14,7 @@ import br.pucrs.engswii.beans.*;
 import br.pucrs.engswii.beans.student.Student;
 import br.pucrs.engswii.beans.student.StudentRegistration;
 import br.pucrs.engswii.beans.student.StudentRegistrationReply;
+import br.pucrs.engswii.beans.user.UserRegistration;
 
 @RestController("register")
 public class StudentRegistrationController {
@@ -24,14 +25,18 @@ public class StudentRegistrationController {
 	@PostMapping("/student")
 	public StudentRegistrationReply registerStudent(@RequestBody Student student) {
 		System.out.println("In registerStudent");
-		StudentRegistrationReply stdregreply = new StudentRegistrationReply();           
-		StudentRegistration.getInstance().add(student);
-		//We are setting the below value just to reply a message back to the caller
-		stdregreply.setName(student.getName());
-		stdregreply.setAge(student.getAge());
-		stdregreply.setRegistrationNumber(student.getRegistrationNumber());
-		stdregreply.setRegistrationStatus("Successful");
-
+		StudentRegistrationReply stdregreply = new StudentRegistrationReply();
+		if(UserRegistration.getInstance().isLogged().equals("Validation successful")){
+			StudentRegistration.getInstance().add(student);
+			//We are setting the below value just to reply a message back to the caller
+			stdregreply.setName(student.getName());
+			stdregreply.setAge(student.getAge());
+			stdregreply.setRegistrationNumber(student.getRegistrationNumber());
+			stdregreply.setRegistrationStatus("Successful");
+		}
+		else{
+			stdregreply.setRegistrationStatus(UserRegistration.getInstance().isLogged()); //retorna "Validation un-successful"
+		}
 		return stdregreply;
 	}
 
