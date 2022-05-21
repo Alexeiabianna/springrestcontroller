@@ -4,7 +4,7 @@ public class User {
     String name;
     String password;
     String registrationNumber;
-    Boolean isLogged;
+    Boolean status;
 
     public String getName() {
         return name;
@@ -22,8 +22,12 @@ public class User {
         this.password = password;
     }
 
+    public Boolean getStatus() {
+        return status;
+    }
+
     public void setStatus() {
-        this.isLogged = !this.isLogged;
+        this.status = !this.status;
     }
 
     public String getRegistrationNumber() {
@@ -32,14 +36,6 @@ public class User {
 
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
-    }
-
-    public Boolean getIsLogged() {
-        return isLogged;
-    }
-
-    public void setIsLogged(Boolean isLogged) {
-        this.isLogged = isLogged;
     }
     
 

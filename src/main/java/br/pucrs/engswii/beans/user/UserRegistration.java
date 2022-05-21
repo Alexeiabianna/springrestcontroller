@@ -41,6 +41,7 @@ public class UserRegistration {
   public String login(User user) {
       for (User user_list : userRecords) {
 				if(user_list.getName() == user.getName() && user_list.getPassword() == user.getPassword()) {
+					user.setStatus();
 					return "Login successful";
 				}
 		}
@@ -59,7 +60,7 @@ public class UserRegistration {
 	
 	public String isLogged() {
 		for (User user_list : userRecords) {
-			if(user_list.getIsLogged()){
+			if(user_list.getStatus()){
 				return "Validation successful";
 			}
 		}
