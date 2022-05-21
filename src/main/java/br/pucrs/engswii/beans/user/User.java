@@ -3,6 +3,7 @@ package br.pucrs.engswii.beans.user;
 public class User {
     String name;
     String password;
+    String registrationNumber;
     Boolean status;
 
     public String getName() {
@@ -19,6 +20,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRegistrationNumber() {
+        return registrationNumber;
+    }
+
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
     }
 
     public Boolean getStatus() {
