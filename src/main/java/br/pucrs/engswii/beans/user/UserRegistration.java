@@ -26,7 +26,7 @@ public class UserRegistration {
 
   public String add(User user) {
 		for (User user_list : userRecords) {
-			if(user_list.getName() == user.getName()) {
+			if(user_list.getName() != user.getName()) {
 				userRecords.add(user);
 				return "Successful";
 			}
