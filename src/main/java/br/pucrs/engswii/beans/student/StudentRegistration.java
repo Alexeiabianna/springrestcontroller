@@ -72,7 +72,7 @@ public class StudentRegistration {
 	public List<Student> getStudentsByNameSegment(String nameSegment) {
 		List<Student> resultedStudents = new ArrayList<>();
 		for (Student student : studentRecords) {
-			if (student.getName().contains(nameSegment)) {
+			if (student.getName() == nameSegment) {
 				resultedStudents.add(student);
 			}
 		}

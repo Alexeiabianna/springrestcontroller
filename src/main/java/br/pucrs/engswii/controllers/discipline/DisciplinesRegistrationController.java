@@ -13,7 +13,7 @@ public class DisciplinesRegistrationController {
 
     @PostMapping("register/disciplines")
     public DisciplineRegistrationReply registerDisciplines(@RequestBody Discipline discipline) {
-        System.out.println("In Registrater Discipline");
+        System.out.println("In Registration Discipline");
         DisciplineRegistration.getInstance().add(discipline);
         DisciplineRegistrationReply discRegReply = new DisciplineRegistrationReply();
         discRegReply.setCod_disciplina(discipline.getCod_disciplina());
