@@ -22,14 +22,6 @@ public class User {
         this.password = password;
     }
 
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus() {
-        this.status = !this.status;
-    }
-
     public String getRegistrationNumber() {
         return registrationNumber;
     }
@@ -37,6 +29,12 @@ public class User {
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
-    
 
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 }
