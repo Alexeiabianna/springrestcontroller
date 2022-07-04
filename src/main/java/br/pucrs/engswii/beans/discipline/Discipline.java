@@ -1,9 +1,9 @@
 package br.pucrs.engswii.beans.discipline;
 
 public class Discipline {
-    String cod_disciplina;
-    String nome_disciplina;
-    String horario_disciplina;
+    private String cod_disciplina;
+    private String nome_disciplina;
+    private String horario_disciplina;
     
     public String getCod_disciplina() {
         return cod_disciplina;
