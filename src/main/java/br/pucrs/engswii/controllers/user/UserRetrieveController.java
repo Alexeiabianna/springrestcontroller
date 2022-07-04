@@ -1,6 +1,5 @@
 package br.pucrs.engswii.controllers.user;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,5 +22,4 @@ public class UserRetrieveController {
 	public List<User> getAllUsers() {
 		return UserRegistration.getInstance().getUserRecords();
 	}
-
 }
