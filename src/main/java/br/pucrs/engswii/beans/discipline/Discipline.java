@@ -5,6 +5,15 @@ public class Discipline {
     private String nome_disciplina;
     private String horario_disciplina;
     
+	public Discipline() {} // Construtor vazio
+
+	public Discipline(String cod_disciplina, String nome_disciplina, String horario_disciplina) { // Construtor com parâmetros
+		super();
+		this.cod_disciplina = cod_disciplina;
+		this.nome_disciplina = nome_disciplina;
+		this.horario_disciplina = horario_disciplina;
+	}
+
     public String getCod_disciplina() {
         return cod_disciplina;
     }

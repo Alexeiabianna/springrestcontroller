@@ -6,6 +6,15 @@ public class Student {
     int age;
     String registrationNumber;
     
+	public Student() {} // Construtor vazio
+
+	public Student(String name, int age, String registrationNumber) { // Construtor com parâmetros
+		super();
+		this.name = name;
+		this.age = age;
+		this.registrationNumber = registrationNumber;
+	}
+
 	public String getName() {
 		return name;
 	}

@@ -5,6 +5,16 @@ public class User {
     String password;
     String registrationNumber;
     Boolean status;
+    
+	public User() {} // Construtor vazio
+
+	public User(String name, String password, String registrationNumber, Boolean status) { // Construtor com parâmetros
+		super();
+		this.name = name;
+		this.password = password;
+		this.registrationNumber = registrationNumber;
+        this.status = status;
+	}
 
     public String getName() {
         return name;
